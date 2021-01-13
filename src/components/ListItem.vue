@@ -1,5 +1,5 @@
 <template>
-<select v-model="country" v-on:change="handleSubmit">
+<select class="select" v-model="country" v-on:change="handleSubmit">
   <option v-for="(country, index) in countries" :country="country" :key="index"  v-bind:value="country" >{{country.name}}</option>
   </select>
 </template>
@@ -23,5 +23,7 @@ export default {
 </script>
 
 <style  scoped>
-
+.select {
+    height: 2em;
+}
 </style>
