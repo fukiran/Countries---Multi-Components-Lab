@@ -1,26 +1,30 @@
 <template>
   <div>
    <h1>Countries</h1>
-   <countries-list> :countries='countries' </countries-list>
+   <countries-list :countries='countries'> </countries-list>
   </div>
 </template>
 
 <script>
-
+import { eventBus } from './main.js'
 import CountriesList from './components/CountriesList.vue';
 
 export default {
-  name: "app",
+  name: 'app',
   data(){
     return {
-    countries: []
-    }
+    countries: [],
+    selectedCountry: null
+    };
   },
   mounted(){
     fetch('https://restcountries.eu/rest/v2/all')
     .then(res => res.json())
-    .then(data => this.countries = data);
-    console.log(this.countries)
+    .then(countries => this.countries = countries);
+
+    eventBus.$on('country-selected', (country) => {
+      this.selectedCountry = country;
+    })
   },
   components: {
     "countries-list": CountriesList
