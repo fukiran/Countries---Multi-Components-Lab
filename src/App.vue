@@ -11,7 +11,6 @@
 <script>
 import { eventBus } from './main.js'
 import ListItem from './components/ListItem';
-import CountriesList from './components/CountriesList.vue';
 import CountryDetail from './components/CountryDetail';
 
 export default {
@@ -32,7 +31,6 @@ export default {
     })
   },
   components: {
-    "countries-list": CountriesList,
     "country-detail": CountryDetail,
     "list-item": ListItem
   },
