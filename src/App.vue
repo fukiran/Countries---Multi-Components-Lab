@@ -1,13 +1,16 @@
 <template>
   <div>
-   <h1>Countries</h1>
-   <countries-list :countries='countries'> </countries-list>
-   <country-detail :country='selectedCountry'></country-detail>
+    <h1>Countries</h1>
+    <div class="main-container">
+      <list-item :countries='countries'> </list-item>
+      <country-detail :country='selectedCountry'></country-detail>
+    </div>
   </div>
 </template>
 
 <script>
 import { eventBus } from './main.js'
+import ListItem from './components/ListItem';
 import CountriesList from './components/CountriesList.vue';
 import CountryDetail from './components/CountryDetail';
 
@@ -30,11 +33,15 @@ export default {
   },
   components: {
     "countries-list": CountriesList,
-    "country-detail": CountryDetail
+    "country-detail": CountryDetail,
+    "list-item": ListItem
   },
 }
 </script>
 
-<style>
-
+<style leng="css">
+.main-container {
+  display: flex;
+  justify-content: space-around;
+  }
 </style>

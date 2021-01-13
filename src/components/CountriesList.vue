@@ -13,7 +13,8 @@ export default {
     name: 'countries-list',
     props: ['countries'],
     components: {
-      "list-item": ListItem
+      "list-item": ListItem,
+    
   }
 }
 </script>
