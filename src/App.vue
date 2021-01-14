@@ -1,4 +1,4 @@
-<template>
+<template lang="html">
   <div>
     <h1>Countries</h1>
     <div class="main-container">
@@ -37,7 +37,7 @@ export default {
 }
 </script>
 
-<style leng="css">
+<style lang="css">
 .main-container {
   display: flex;
   justify-content: space-around;

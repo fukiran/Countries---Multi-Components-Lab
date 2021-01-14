@@ -1,4 +1,4 @@
-<template>
+<template lang="html">
   <div v-if='country'>
       <h3>Country: {{country.name}}</h3>
       <p>Population: {{country.population}}</p>
@@ -23,7 +23,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="css" scoped>
   .img {
     height: 80px
   }

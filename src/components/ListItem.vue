@@ -1,4 +1,4 @@
-<template>
+<template lang="html">
 <select class="select"  v-model="selectedCountry" v-on:change="handleSubmit">
   <!-- <option  v-for="(country, index) in countries" :country="country" :key="index"  v-bind:value="country" >{{country.name}}</option> -->
   <option  v-for="country in countries"  :value="country" >{{country.name}}</option>
@@ -28,7 +28,7 @@ export default {
 
 </script>
 
-<style  scoped>
+<style  lang="css" scoped>
 .select {
     height: 2em;
 }
